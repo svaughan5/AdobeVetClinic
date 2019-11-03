@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="494.0" prefWidth="556.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Label layoutX="39.0" layoutY="429.0" prefHeight="33.0" prefWidth="78.0" text="Last Action :" />
+      <Button fx:id="addApptBtn" layoutX="39.0" layoutY="94.0" mnemonicParsing="false" onAction="#showAddApptInfo" prefHeight="25.0" prefWidth="139.0" text="Add Appointment" />
+      <Button fx:id="cancelApptBtn" layoutX="220.0" layoutY="94.0" mnemonicParsing="false" onAction="#showCancelApptInfo" prefHeight="25.0" prefWidth="139.0" text="Cancel Appointment" />
+      <Button fx:id="searchApptBtn" layoutX="387.0" layoutY="94.0" mnemonicParsing="false" onAction="#showSearchApptInfo" prefHeight="25.0" prefWidth="139.0" text="Search Appointment" />
+      <TextField fx:id="clientTxt" layoutX="203.0" layoutY="183.0" prefHeight="25.0" prefWidth="174.0" visible="false" />
+      <TextField fx:id="patientTxt" layoutX="203.0" layoutY="235.0" prefHeight="25.0" prefWidth="174.0" visible="false" />
+      <Label fx:id="clientNameLbl" layoutX="100.0" layoutY="187.0" prefHeight="17.0" prefWidth="78.0" text="Client Name   :" visible="false" />
+      <Label fx:id="patientNamelbl" layoutX="100.0" layoutY="239.0" prefHeight="17.0" prefWidth="78.0" text="Patient Name :" visible="false" />
+      <DatePicker fx:id="dateTxt" layoutX="203.0" layoutY="292.0" visible="false" />
+      <Label fx:id="dateLbl" layoutX="100.0" layoutY="296.0" prefHeight="17.0" prefWidth="78.0" text="Date              :" visible="false" />
+      <Label fx:id="timeLbl" layoutX="100.0" layoutY="349.0" prefHeight="17.0" prefWidth="78.0" text="Time(Military):" visible="false" />
+      <TextField fx:id="timeTxt" layoutX="203.0" layoutY="345.0" prefHeight="25.0" prefWidth="174.0" visible="false" />
+      <Button fx:id="addApptFinalBtn" layoutX="209.0" layoutY="380.0" mnemonicParsing="false" onAction="#addAppointment" prefHeight="25.0" prefWidth="139.0" text="Add Appointment" visible="false" />
+      <Button fx:id="cancelApptFinalBtn" layoutX="209.0" layoutY="380.0" mnemonicParsing="false" onAction="#cancelAppointment" prefHeight="25.0" prefWidth="139.0" text="Cancel Appointment" visible="false" />
+      <Button fx:id="searchApptFinalBtn" layoutX="209.0" layoutY="380.0" mnemonicParsing="false" onAction="#searchAppointment" prefHeight="25.0" prefWidth="139.0" text="Search" visible="false" />
+      <Label fx:id="lastActionLbl" layoutX="117.0" layoutY="429.0" prefHeight="33.0" prefWidth="373.0" text="Label" visible="false" />
+   </children>
+</AnchorPane>
