@@ -37,6 +37,10 @@ public class Controller implements Initializable {
     public Button cancelApptFinalBtn;
     public Button searchApptFinalBtn;
     public Label lastActionLbl;
+    public TextField regClientNameTxt;
+    public Button regClientBtn;
+    public TextField regClientEmailTxt;
+    public DatePicker regClientDobTxt;
 
     @Override
     public void initialize(URL location, ResourceBundle resources){
