@@ -3,14 +3,16 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="300.0" prefWidth="280.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane prefHeight="315.0" prefWidth="295.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <Label layoutX="25.0" layoutY="36.0" prefHeight="18.0" prefWidth="66.0" text="Name :" />
-      <Label layoutX="25.0" layoutY="97.0" prefHeight="18.0" prefWidth="66.0" text="DOB  :" />
-      <Label layoutX="25.0" layoutY="163.0" prefHeight="18.0" prefWidth="66.0" text="Email :" />
-      <Button fx:id="regClientBtn" layoutX="74.0" layoutY="225.0" mnemonicParsing="false" onAction="#registerClient" prefHeight="26.0" prefWidth="131.0" text="Register Client" />
+      <Label layoutX="25.0" layoutY="84.0" prefHeight="18.0" prefWidth="66.0" text="DOB  :" />
+      <Label layoutX="25.0" layoutY="141.0" prefHeight="18.0" prefWidth="66.0" text="Email :" />
+      <Button fx:id="regClientBtn" layoutX="70.0" layoutY="251.0" mnemonicParsing="false" onAction="#registerClient" prefHeight="26.0" prefWidth="131.0" text="Register Client" />
       <TextField fx:id="regClientNameTxt" layoutX="108.0" layoutY="32.0" />
-      <TextField fx:id="regClientEmailTxt" layoutX="108.0" layoutY="159.0" />
-      <DatePicker fx:id="regClientDobTxt" layoutX="108.0" layoutY="93.0" prefHeight="26.0" prefWidth="188.0" />
+      <TextField fx:id="regClientEmailTxt" layoutX="108.0" layoutY="137.0" />
+      <DatePicker fx:id="regClientDobTxt" layoutX="107.0" layoutY="80.0" prefHeight="26.0" prefWidth="188.0" />
+      <Label layoutX="25.0" layoutY="203.0" prefHeight="18.0" prefWidth="66.0" text="Phone :" />
+      <TextField fx:id="clientPhoneTxt" layoutX="108.0" layoutY="200.0" />
    </children>
 </AnchorPane>

@@ -1,9 +1,11 @@
 package sample;
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
@@ -41,6 +43,23 @@ public class Controller implements Initializable {
     public Button regClientBtn;
     public TextField regClientEmailTxt;
     public DatePicker regClientDobTxt;
+    public TextField clientSearchNameTxt;
+    public TextField clientSearchEmailTxt;
+    public Button searchPatientsBtn;
+    public Button searchApptHistoryBtn;
+    public Button searchPaymentHistoryBtn;
+    public Button updatePatientBtn;
+    public Button updateClientBtn;
+    public Label oneLbl;
+    public TextField twoTxt;
+    public Label twoLbl;
+    public Label threeLbl;
+    public Label fourLbl;
+    public TextField oneTxt;
+    public TextField threeTxt;
+    public TextField fourTxt;
+    public Button clientFinalUpdateBtn;
+    public Button patientFinalUpdateBtn;
 
     @Override
     public void initialize(URL location, ResourceBundle resources){
@@ -58,6 +77,7 @@ public class Controller implements Initializable {
         appointmentStage.setScene(new Scene(apptRoot, 556, 494));
         appointmentStage.show();
 
+        ((Node)(actionEvent.getSource())).getScene().getWindow().hide();
     }
 
     //Add Client
@@ -66,7 +86,7 @@ public class Controller implements Initializable {
 
         Stage addClientStage = new Stage();
         addClientStage.setTitle("Add Client");
-        addClientStage.setScene(new Scene(addClientRoot, 300, 280));
+        addClientStage.setScene(new Scene(addClientRoot, 310, 295));
         addClientStage.show();
     }
 
@@ -96,7 +116,7 @@ public class Controller implements Initializable {
 
         Stage searchStage = new Stage();
         searchStage.setTitle("Database Search");
-        searchStage.setScene(new Scene(searchRoot, 556, 494));
+        searchStage.setScene(new Scene(searchRoot, 340, 400));
         searchStage.show();
     }
 
@@ -108,6 +128,37 @@ public class Controller implements Initializable {
         updateStage.setTitle("Update Information");
         updateStage.setScene(new Scene(updateRoot, 350, 250));
         updateStage.show();
+
+        ((Node)(actionEvent.getSource())).getScene().getWindow().hide();
+    }
+
+    //Return to main function
+    public void mainMenu(ActionEvent actionEvent){
+        try{
+            ((Node)actionEvent.getSource()).getScene().getWindow().hide();
+            Stage primaryStage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = loader.load(getClass().getResource("Main.fxml").openStream());
+            Scene scene = new Scene(root);
+            //scene.getStylesheets().add(getClass().getResource(""))
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        }catch (Exception e){
+
+        }
+    }
+
+    //Open update all information screen
+    //Update screen
+    public void displayUpdateAllScreen(ActionEvent actionEvent) throws Exception{
+        Parent updateAllRoot = FXMLLoader.load(getClass().getResource("updateInformation.fxml"));
+
+        Stage updateAllStage = new Stage();
+        updateAllStage.setTitle("Update Information");
+        updateAllStage.setScene(new Scene(updateAllRoot, 556, 494));
+        updateAllStage.show();
+
+        ((Node)(actionEvent.getSource())).getScene().getWindow().hide();
     }
 
     // ***************** END OF WINDOW METHODS *************************
@@ -210,6 +261,42 @@ public class Controller implements Initializable {
     public void registerClient(ActionEvent actionEvent) throws Exception{
         new Alert(Alert.AlertType.INFORMATION, "This button will gather client information " +
                 "then generate an id within the system for that client.").showAndWait();
+    }
+
+    //Update information information
+    //Client
+    public void displayClientUpdateInfo(ActionEvent actionEvent)throws Exception{
+        oneLbl.setVisible(true);
+        twoLbl.setVisible(true);
+        threeLbl.setVisible(true);
+        fourLbl.setVisible(false);
+        oneLbl.setText("Client New Name:");
+        twoLbl.setText("Client New Phone:");
+        threeLbl.setText("Client New Email:");
+        oneTxt.setVisible(true);
+        twoTxt.setVisible(true);
+        threeTxt.setVisible(true);
+        fourTxt.setVisible(false);
+        clientFinalUpdateBtn.setVisible(true);
+        patientFinalUpdateBtn.setVisible(false);
+    }
+
+    //Patient
+    public void displayPatientUpdateInfo(ActionEvent actionEvent)throws Exception{
+        oneLbl.setVisible(true);
+        twoLbl.setVisible(true);
+        threeLbl.setVisible(true);
+        fourLbl.setVisible(true);
+        oneLbl.setText("Patient New Weight:");
+        twoLbl.setText("Patient New Height:");
+        threeLbl.setText("Patient New Age:");
+        fourLbl.setText("Patient New Status:");
+        oneTxt.setVisible(true);
+        twoTxt.setVisible(true);
+        threeTxt.setVisible(true);
+        fourTxt.setVisible(true);
+        patientFinalUpdateBtn.setVisible(true);
+        clientFinalUpdateBtn.setVisible(false);
     }
 
 }
