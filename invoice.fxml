@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="sample.Controller"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="441.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Label layoutX="64.0" layoutY="94.0" prefHeight="33.0" prefWidth="113.0" text="Client ID" />
+      <Label layoutX="64.0" layoutY="189.0" prefHeight="33.0" prefWidth="113.0" text="Total" />
+      <Label layoutX="64.0" layoutY="136.0" prefHeight="33.0" prefWidth="113.0" text="Date" />
+      <TextField fx:id="total" layoutX="219.0" layoutY="193.0" />
+      <DatePicker fx:id="invoiceDate" layoutX="221.0" layoutY="140.0" />
+      <Button fx:id="createInvoice" layoutX="154.0" layoutY="295.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="130.0" text="Create Invoice" />
+      <Label layoutX="64.0" layoutY="53.0" prefHeight="33.0" prefWidth="113.0" text="Exam ID" />
+      <TextField fx:id="invoiceClientID" layoutX="219.0" layoutY="98.0" />
+      <TextField fx:id="invoiceExamID" layoutX="219.0" layoutY="57.0" />
+   </children>
 </AnchorPane>
